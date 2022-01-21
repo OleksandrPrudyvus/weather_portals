@@ -9,7 +9,7 @@ Python must already be installed
 
 1. Clone the repo: 
    
-   * `git clone https://github.com/OleksandrPrudyvus/weathe-portal`
+   * `git clone https://github.com/OleksandrPrudyvus/weather_portals.git`
     
 2. Create the virtual environment in project:
 
