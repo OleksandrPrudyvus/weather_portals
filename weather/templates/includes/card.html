@@ -1,0 +1,23 @@
+<div class="card shadow-0 border">
+	<div class="card-body p-4">
+		<h4 class="mb-1 sfw-normal">{{ info.name }} {{ info.country }}</h4>
+		<p class="mb-2">Current temperature: <strong>{{ info.temp }}</strong></p>
+		<p>Feels like: <strong>{{info.feels_like}}</strong></p>
+		<p>Max: <strong>{{ info.temp_max }}</strong>, Min: <strong>{{ info.temp_min }}</strong></p>
+		<div class="d-flex flex-row align-items-center">
+			<p class="mb-0 me-4">Scattered Clouds</p>
+			<img src="http://openweathermap.org/img/w/{{ info.icon }}.png">
+		</div>
+		<p>
+			<a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+				More info
+			</a>
+		</p>
+		<div class="collapse" id="collapseExample">
+			<div class="card card-body">
+				{{ all_info }}
+			</div>
+		</div>
+	</div>
+
+</div>

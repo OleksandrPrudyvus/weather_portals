@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+Search city
+{% endblock %}
+
+{% block content%}
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-md-8 col-lg-6 col-xl-4">
+        <h3 class="mb-4 pb-2 fw-normal text-light">Check the weather forecast</h3>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="input-group rounded mb-3">
+            {{ form.name }}
+            <button class="btn btn-danger input-group-text">
+              <span class=" border-0 fw-bold" id="search-addon">Check</span>
+            </button>
+          </div>
+        </form>
+        {% if info %}
+        {% include 'includes/card.html' %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
