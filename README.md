@@ -14,12 +14,12 @@ Python must already be installed
 2. Create the virtual environment in project:
 
    * `cd weathe-portal`
-
-   * `python -m venv venv`
    
    * `cd venv/Scripts`
    
    * `activate.bat`
+
+   * `cd ../../`
    
 3. Install project requirements:
 
