@@ -29,16 +29,25 @@ Search story
 			<th scope="col">ID</th>
 			<th scope="col">City name</th>
 			<th scope="col">Date of creation</th>
-			<th scope="col">Story</th>
+			<th scope="col">Weather</th>
 		</tr>
 	</thead>
 	<tbody>
 		{% for info in page_obj %}
 		<tr>
-			<td>{{ info.id }}</td>
-			<td>{{ info.name }}</td>
-			<td>{{ info.data }}</td>
-			<td>{{ info.story }}</td>
+            <th scope="col">{{ info.id }}</th>
+			<th scope="col">{{ info.name }}</th>
+			<th scope="col">{{ info.data }}</th>
+			<th scope="col">
+                <div class="container">
+                    <p class="text-left"><strong>Temp: </strong>{{ info.temp }}</p>
+                    <p><strong>Feels like:</strong> {{ info.feels_like }}</p>
+                    <p> <strong>Min: </strong> {{ info.temp_min }} <strong> Max:</strong> {{ info.temp_max }}</p>
+                    <img src="http://openweathermap.org/img/w/{{ info.icon }}.png">
+                </div>
+
+            </th>
+			{{ info }}
 		</tr>
 		{% endfor %}
 	</tbody>
@@ -68,7 +77,6 @@ Search story
 		$(function() {
 			$('.datepicker').datepicker({
 				format: 'yyyy-mm-dd',
-				startDate: '-3d'
 			})
 		});
 	</script>

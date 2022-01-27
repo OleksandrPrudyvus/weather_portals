@@ -16,7 +16,12 @@ class City(models.Model):
     """
     name = models.CharField(max_length=40)
     data = models.DateField(null=True)
-    story = models.CharField(max_length=500)
+    country = models.CharField(max_length=50, null=True)
+    temp = models.FloatField(null=True)
+    feels_like = models.FloatField(null=True)
+    temp_min = models.FloatField(null=True)
+    temp_max = models.FloatField(null=True)
+    icon = models.CharField(max_length=10, null=True)
 
     def __repr__(self):
         return f'{self.name}'
