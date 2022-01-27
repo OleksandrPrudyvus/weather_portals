@@ -15,8 +15,6 @@ Python must already be installed
    
    * `python -m venv`
    
-   * `cd weathe-portal`
-   
    * `cd venv/Scripts`
    
    * `activate.bat`
