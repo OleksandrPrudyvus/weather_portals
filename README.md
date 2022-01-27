@@ -12,7 +12,9 @@ Python must already be installed
    * `git clone https://github.com/OleksandrPrudyvus/weather_portals.git`
     
 2. Create the virtual environment in project:
-
+   
+   * `python -m venv`
+   
    * `cd weathe-portal`
    
    * `cd venv/Scripts`
